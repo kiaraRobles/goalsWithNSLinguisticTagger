@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ViewController : UIViewController
+
+
+@property (weak, nonatomic) IBOutlet UILabel *lab;
+
+@property (weak, nonatomic) IBOutlet UITextField *textf;
+
+- (IBAction)sub:(id)sender;
 
 
 @end

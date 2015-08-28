@@ -13,10 +13,13 @@
 @end
 
 @implementation ViewController
+@synthesize lab, textf;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"How it works" message:@"This project allows you imput a goal, and be prompted on how you would measure your success or failure." delegate:self cancelButtonTitle:@"Got it" otherButtonTitles:nil];
+
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +27,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)sub:(id)sender {
+    
+    NSString *input = textf.text;
+    
+    lab.text = input;
+    
+}
 @end
+
